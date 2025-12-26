@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1132961 -FinalTerm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>GO NINE</h1>
+        
+        <div class="status" id="status">準備對局...</div>
+
+        <div class="score-panel">
+            <div class="score-card black">
+                <small>BLACK</small>
+                <div id="blackScore" style="font-size: 1.5rem; font-weight: bold;">0</div>
+            </div>
+            <div class="score-card white">
+                <small>WHITE</small>
+                <div id="whiteScore" style="font-size: 1.5rem; font-weight: bold;">0</div>
+            </div>
+        </div>
+        
+        <div id="board-container">
+            <div id="board"></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="game.undoMove()">悔棋</button>
+            <button onclick="newGame()">重開局</button>
+            <button class="pass-btn" onclick="game.pass()">虛手 Pass</button>
+            <button onclick="toggleAI()" id="aiToggleBtn">AI: 開</button>
+        </div>
+        
+        <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">
+            連續虛手: <span id="passCount">0</span> / 2
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
